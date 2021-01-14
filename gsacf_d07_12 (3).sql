@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2021 年 1 月 07 日 15:26
+-- 生成日時: 2021 年 1 月 14 日 14:54
 -- サーバのバージョン： 10.4.17-MariaDB
 -- PHP のバージョン: 8.0.0
 
@@ -100,7 +100,9 @@ INSERT INTO `todo_table` (`id`, `todo`, `deadline`, `created_at`, `updated_at`) 
 (14, 'モリモリ', '2020-12-03', '2020-12-26 15:45:08', '2020-12-26 15:45:08'),
 (15, 'テスト', '2020-12-04', '2020-12-26 16:49:01', '2020-12-26 16:49:01'),
 (16, 'モリモリno', '2021-01-01', '2020-12-26 17:25:58', '2020-12-26 17:25:58'),
-(17, 'モリモリのモリモリ', '2021-01-08', '2020-12-26 17:32:06', '2020-12-26 17:32:06');
+(17, 'モリモリのモリモリ', '2021-01-08', '2020-12-26 17:32:06', '2020-12-26 17:32:06'),
+(19, 'モリモリ', '2021-01-08', '2021-01-09 16:18:11', '2021-01-09 16:18:11'),
+(20, 'LT準備', '2021-01-09', '2021-01-09 16:23:09', '2021-01-09 16:23:09');
 
 -- --------------------------------------------------------
 
@@ -111,7 +113,7 @@ INSERT INTO `todo_table` (`id`, `todo`, `deadline`, `created_at`, `updated_at`) 
 CREATE TABLE `users_table` (
   `id` int(12) NOT NULL,
   `username` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `pass_word` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_admin` int(1) NOT NULL,
   `is_deleted` int(1) NOT NULL,
   `created_at` datetime NOT NULL,
@@ -122,10 +124,16 @@ CREATE TABLE `users_table` (
 -- テーブルのデータのダンプ `users_table`
 --
 
-INSERT INTO `users_table` (`id`, `username`, `pass_word`, `is_admin`, `is_deleted`, `created_at`, `updated_at`) VALUES
+INSERT INTO `users_table` (`id`, `username`, `password`, `is_admin`, `is_deleted`, `created_at`, `updated_at`) VALUES
 (3, '木内 亮子', '7788', 3434, 1212, '2020-12-30 15:37:25', '2021-01-06 20:07:30'),
 (4, '木内　恵美莉', '123', 2, 1, '2021-01-01 23:43:44', '2021-01-01 23:47:35'),
-(6, '森田　美夫', '0', 1, 1, '2021-01-06 20:07:12', '2021-01-06 20:26:45');
+(6, '森田　美夫', '0', 1, 1, '2021-01-06 20:07:12', '2021-01-06 20:26:45'),
+(7, 'kiuchi', '0102', 0, 0, '2021-01-09 15:51:19', '2021-01-09 15:51:19'),
+(8, '木内　恵利子', '0905', 0, 0, '2021-01-09 15:59:38', '2021-01-09 15:59:38'),
+(9, 'ryouta', '0731', 0, 0, '2021-01-09 16:19:47', '2021-01-09 16:19:47'),
+(10, '木内 亮太', '0731', 0, 0, '2021-01-12 17:07:10', '2021-01-12 17:07:10'),
+(11, '木内', '', 0, 0, '2021-01-12 17:22:52', '2021-01-12 17:22:52'),
+(13, '木内　隆司', '0224', 0, 0, '2021-01-14 18:37:52', '2021-01-14 18:37:52');
 
 --
 -- ダンプしたテーブルのインデックス
@@ -175,13 +183,13 @@ ALTER TABLE `goods`
 -- テーブルの AUTO_INCREMENT `todo_table`
 --
 ALTER TABLE `todo_table`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- テーブルの AUTO_INCREMENT `users_table`
 --
 ALTER TABLE `users_table`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

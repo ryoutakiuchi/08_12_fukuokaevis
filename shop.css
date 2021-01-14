@@ -2,19 +2,19 @@ header{
 background-color: #8fbc8f;
 width: 100%;
     padding: 10px 0;
-}
+    
+} 
 .inner {
     width: 100%;
     position: relative;
     margin: 0 auto;
-}
+   
+} 
     
-
 .logo {
     padding: 0 10px;
-    text-align: left;
-
-}
+    text-align: left; 
+} 
 
 
 body {

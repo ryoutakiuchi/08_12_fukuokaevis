@@ -1,5 +1,9 @@
 <?php
+// var_dump($_POST);
+// exit();
 require 'common.php';
+// var_dump($_POST);
+// exit();
 $error = $name = $address = $tel = '';
 if (@$_POST['submit']) {
     $name = htmlspecialchars($_POST['name']);

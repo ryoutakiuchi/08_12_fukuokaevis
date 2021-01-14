@@ -16,6 +16,8 @@
 
         <div class="inner">
             <h1 class="logo"> 福岡エビス</h1>
+            ようこそ
+            <?= $username ?>さん
 
 
 
@@ -38,8 +40,8 @@
             <li><a href="#howto">商品の使い方</a></li>
             <li><a href="#company_profile">会社概要</a></li>
             <li><a href="#contact">お問い合わせ</a></li>
-            <li><a href="login.php">ログイン</a></li>
-            <li><a href="#login_contact">会員登録</a></li>
+            <li><a href="logout.php">ログアウト</a></li>
+            <li><a href="mypage.php">マイページ</a></li>
         </ul>
     </nav>
 
@@ -87,7 +89,10 @@
 <h1 id="product">商品のご案内</h1>
 
 <table>
-    <?php foreach ($goods as $g) { ?>
+
+    <?php foreach ($goods as $g) {
+
+    ?>
         <tr>
             <td>
                 <?php echo img_tag($g['code']) ?>

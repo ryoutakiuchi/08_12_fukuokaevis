@@ -15,11 +15,13 @@ $pdo = connect();
 
 
 // データ受け取り
-// $username = $_POST["username"];
-// $password = $_POST["password"];
+$username = $_POST["username"];
 
-// DB接続関数
-// $pdo = connect();
+$password = $_POST["password"];
+// var_dump($_POST);
+// exit();
+
+
 
 $sql = 'SELECT * FROM users_table WHERE id=:id';
 // var_dump($sql);
@@ -29,8 +31,10 @@ $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $status = $stmt->execute();
 
-var_dump($id);
-exit();
+
+
+// var_dump($id);
+// exit();
 
 if ($status == false) {
     // SQL実行に失敗した場合はここでエラーを出力し，以降の処理を中止する

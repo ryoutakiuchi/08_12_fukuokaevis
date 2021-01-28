@@ -35,7 +35,7 @@
         </form>
     </div>
     <div class="base">
-        <a href="index_read.php">お買い物に戻る</a>　
+        <a href="read.php">お買い物に戻る</a>　
         <a href="cart.php">カートに戻る</a>
     </div>
 </body>

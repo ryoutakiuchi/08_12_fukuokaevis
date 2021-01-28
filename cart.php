@@ -6,8 +6,8 @@ session_start();
 include("common.php");
 check_session_id();
 
-var_dump($_POST);
-exit();
+// var_dump($_POST);
+// exit();
 
 // require 'common.php';
 

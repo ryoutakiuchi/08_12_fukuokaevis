@@ -32,7 +32,10 @@ if (!$val) {
     $_SESSION["session_id"] = session_id();
     $_SESSION["is_admin"] = $val["is_admin"];
     $_SESSION["username"] = $val["username"];
+    $_SESSION["id"] = $val["id"];
+    // var_dump($_SESSION);
+    // exit();
     // 一覧ページへ移動
-    header("Location:index_read.php");
+    header("Location:read.php");
     exit();
 }
